@@ -1,0 +1,496 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.calculator-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vw;
+    background-color: rgb(29, 39, 64);
+}
+
+.calculator {
+    max-width: 555px;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background-color: hsl(0, 0%, 15%);
+    box-shadow: 0.5px 0.5px 1px #123;
+}
+
+.calculator .wrapper {
+    padding: 16px;
+    width: 95%;
+}
+
+.calculator .wrapper .result {
+    width: 95%;
+    text-align: right;
+    border-radius: 16px;
+    padding: 20px;
+    white-space: wrap;
+    margin-bottom: 22px;
+}
+
+.result .curentOperation {
+    font-size: 3em;
+    color: white;
+}
+
+.result .operation {
+    font-size: 23px;
+    color: gray;
+}
+
+.result .previusOperation {
+    font-size: 23px;
+    color: white;
+}
+
+.calculator-constrols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    background-color: hsl(0, 0%, 50%);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:nth-child(1) {
+    color: black;
+    background-color: rgb(192, 192, 193);
+}
+
+.button:nth-child(2) {
+    color: black;
+    background-color: rgb(192, 192, 193);
+}
+
+.button:nth-child(3) {
+    color: black;
+    background-color: rgb(192, 192, 193);
+}
+
+.button:nth-child(4) {
+    color: #fff;
+    background-color: orange;
+}
+
+.button:nth-child(8) {
+    color: #fff;
+    background-color: orange;
+}
+
+.button:nth-child(12) {
+    color: #fff;
+    background-color: orange;
+}
+
+.button:nth-child(16) {
+    color: #fff;
+    background-color: orange;
+}
+
+.button:last-child {
+    color: #fff;
+    background-color: orange;
+}
+
+.button:active {
+    transform: scale(1.1);
+}
+
+.calendar-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    min-height: 50vw;
+}
+
+.calendar {
+    width: 450px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+    font-size: 22px;
+    color: black;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-family: sans-serif;
+    font-weight: bold;
+    gap: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#calculator-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 14px;
+    margin-top: 20px;
+    font-family: sans-serif;
+}
+
+.arrow i {
+    cursor: pointer;
+}
+
+.active {
+    color: orange;
+}
+
+
+.dates {
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    white-space: wrap;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.dates.active {
+    color: #fff;
+    background: #0866ff;
+}
+
+.dates.active:hover {
+    color: #fff;
+    background: #0866ff;
+}
+
+.dates:hover {
+    background: rgb(242, 242, 244);
+}
+
+.dates.inactive {
+    color: gray;
+}
+
+.arrow i {
+    margin: 0 8px;
+}
+
+.dates.mounstartend {
+    color: rgb(226, 226, 226);
+    cursor: inherit;
+}
+
+.dates.mounstartend:hover {
+    color: rgb(226, 226, 226);
+    background: transparent;
+}
+
+
+.dates.fade-in {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    transform: translateY(-100%);
+    animation: fade-in 0.5s forwards;
+}
+
+.dates.activeBorder {
+    border: 1px solid #0866ff;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vw;
+    background-color: #000430;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row-conteiner {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+    width: 100%;
+    align-items: start;
+}
+
+.todo-list {
+    width: 50%;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgb(182, 182, 182);
+    position: relative;
+    background-color: #fff;
+}
+
+.todo-form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.todo-form input {
+    outline: none;
+    padding: 12px;
+    width: 70%;
+}
+
+.todo-form button {
+    padding: 12px 23px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #0866ff;
+    border: none;
+    background-color: #0866ff;
+}
+
+.todo-content {
+    margin-top: 20px;
+}
+
+.doto-fuuter {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-item {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 5px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-between;
+}
+
+.dragging {
+    opacity: .5;
+    position: absolute;
+}
+
+.task-item.drag {
+    transform: scale(1.1);
+}
+
+.task-text {
+    display: flex;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(208, 206, 206);
+}
+
+.task-text .toggle-completed {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgb(210, 210, 210);
+}
+
+.task-text {
+    font-size: 18px;
+    color: #123;
+    font-weight: bold;
+}
+
+.actions button {
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(210, 210, 210);
+    line-height: 20px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.actions .remove {
+    color: red;
+}
+
+.actions .edit {
+    color: rgb(55, 231, 55);
+}
+
+.clear-completed {
+    width: 150px;
+    text-align: center;
+    background-color: rgb(55, 231, 55);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 6px;
+}
+
+.doto-fuuter {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clear {
+    background-color: red;
+    border: none;
+    padding: 6px 13px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.todo-progress {
+    width: 95%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #252e9488;
+}
+
+.todo-progress .child-progress {
+    height: 100%;
+    background-color: #24feee;
+    border-radius: 5px;
+}
+
+.row-conteiner .todo-information {
+    border: 2px solid #611982;
+    width: 40%;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    background: transparent;
+}
+
+.todo-length {
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #252e94;
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    line-height: 70px;
+    top: 10px;
+    right: 10%;
+}
+
+.row-conteiner .todo-information h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: .8rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.task-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vw;
+}
+
+.curentTask {
+    text-align: center;
+}
+.task-options{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.task-options .task-item{
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    width: 180px;
+}
+.task-options .task-item.correct{
+    background-color: green;
+    color: #fff;
+}
+.task-options .task-item.error{
+    background-color: red;
+    color: #fff;
+}
+.progress-task{
+    width: 100%;
+    height: 5px;
+    border-radius: 8px;
+    margin-right: 6px;
+    background-color: #ccc;
+}
+.progress-task .progress{
+    height: 100%;
+    background-color: green;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
+}
+.task-result{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.test-task-content{
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    animation: scales 1s ease-in-out forwards;
+}
+
+@keyframes scales {
+    to {
+        transform: scale(1);
+    }
+}
